@@ -1,14 +1,22 @@
+#Initialize variables
 numberOfScores = 0
-score1 = 0
-score2 = 0
+score = 0
+scoreCount = 0
 total = 0
 average = 0.0
-scoreCount = 0
 
-#numberOfScores = input("Please enter the number of scores you want to average: ")
-score1 = int(input("Please enter a test score: "))
-score2 = int(input("Please enter a test score: "))
+#Ask user for number of test scores to be averaged
+numberOfScores = int(input("Please enter the number of test scores you want to average: "))
 
-average = (score1 + score2)/2
+#Ask user for each test score and add to total
+while scoreCount < numberOfScores:
+    score = int(input("\nPlease enter a score: "))
+    total += score
+    scoreCount += 1
+    print("Score received.")
 
-print(average)
+#Average the scores
+average = total / numberOfScores
+
+#Display the average
+print("\nThe average for the given test scores is:",average)
